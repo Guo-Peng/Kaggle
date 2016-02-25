@@ -1,4 +1,7 @@
 # encoding:utf-8
+
+# http://www.cnblogs.com/north-north/p/4353365.html
+
 import numpy as np
 import pandas as pd
 import re
@@ -42,3 +45,5 @@ df['Fare_bin_id'] = pd.qcut(df.Fare, 4)
 df.Fare_bin_id = pd.factorize(df.Fare_bin_id)[0] + 1
 
 print df.info()
+
+
