@@ -1,6 +1,10 @@
 # encoding:utf-8
 
 # http://www.cnblogs.com/north-north/p/4353365.html
+# 特征工程方法 Hash, BOW, TFIDF, Categorization, Normalization, PCA
+# feature engineering + ensemble + good machine + domain knowledge
+# gbdt  random forest  交叉验证  XGBOOST
+#
 
 import numpy as np
 import pandas as pd
