@@ -1,10 +1,8 @@
 # -*- coding: UTF-8 -*-
-# import os
-#
-# print os.path.abspath('../../kaggle data/hotel_recommendation')
-# with open(os.path.abspath('../../kaggle data/hotel_recommendation/test'), 'w')as f:
-#     f.write('test')
-import datetime
+# data path ../../kaggle data/hotel_recommendation/data/
+# result path ../../kaggle data/hotel_recommendation/result/
+
+from sandglass import ben
 from heapq import nlargest
 from operator import itemgetter
 from collections import defaultdict
@@ -12,7 +10,7 @@ from collections import defaultdict
 
 def prepare_arrays_match():
     print('Preparing arrays...')
-    f = open("../../kaggle data/hotel_recommendation/train.csv", "r")
+    f = open("../../kaggle data/hotel_recommendation/data/train.csv", "r")
     f.readline()
     best_hotels_od_ulc = defaultdict(lambda: defaultdict(int))
     best_hotels_search_dest = defaultdict(lambda: defaultdict(int))
@@ -59,10 +57,9 @@ def prepare_arrays_match():
 
 def gen_submission(best_hotels_search_dest, best_hotels_od_ulc, popular_hotel_cluster):
     print('Generate submission...')
-    now = datetime.datetime.now()
-    path = 'submission_' + str(now.strftime("%Y-%m-%d-%H-%M")) + '.csv'
+    path = '../../kaggle data/hotel_recommendation/result/submission_' + ben().sql + '.csv'
     out = open(path, "w")
-    f = open("../../kaggle data/hotel_recommendation/test.csv", "r")
+    f = open("../../kaggle data/hotel_recommendation/data/test.csv", "r")
     f.readline()
     total = 0
     out.write("id,hotel_cluster\n")
