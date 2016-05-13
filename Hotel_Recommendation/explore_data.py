@@ -16,6 +16,7 @@ def correlation_cal(path):
 
 
 def main(data_path):
+    # 无明显的线性相关，linear regression 跟 logistic regression 效果不会好
     correlations = correlation_cal(data_path)
     correlations.to_csv('../../kaggle_data/hotel_recommendation/property/correlations')
 
