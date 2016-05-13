@@ -57,9 +57,9 @@ def prepare_arrays_match():
 
 def gen_submission(best_hotels_search_dest, best_hotels_od_ulc, popular_hotel_cluster):
     print('Generate submission...')
-    path = '../../kaggle data/hotel_recommendation/result/submission_' + ben().sql + '.csv'
+    path = '../../kaggle_data/hotel_recommendation/result/submission_' + ben().sql + '.csv'
     out = open(path, "w")
-    f = open("../../kaggle data/hotel_recommendation/data/test.csv", "r")
+    f = open("../../kaggle_data/hotel_recommendation/data/test.csv", "r")
     f.readline()
     total = 0
     out.write("id,hotel_cluster\n")

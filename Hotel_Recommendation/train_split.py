@@ -35,5 +35,5 @@ def main(data_path):
 
 
 if __name__ == '__main__':
-    d_path = '../../kaggle data/hotel_recommendation/data/'
+    d_path = '../../kaggle_data/hotel_recommendation/data/'
     main(d_path)
