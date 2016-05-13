@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
-# data path ../../kaggle data/hotel_recommendation/data/
-# result path ../../kaggle data/hotel_recommendation/result/
+# data path ../../kaggle_data/hotel_recommendation/data/
+# result path ../../kaggle_data/hotel_recommendation/result/
 
 from sandglass import ben
 from heapq import nlargest
@@ -10,7 +10,7 @@ from collections import defaultdict
 
 def prepare_arrays_match():
     print('Preparing arrays...')
-    f = open("../../kaggle data/hotel_recommendation/data/train.csv", "r")
+    f = open("../../kaggle_data/hotel_recommendation/data/train.csv", "r")
     f.readline()
     best_hotels_od_ulc = defaultdict(lambda: defaultdict(int))
     best_hotels_search_dest = defaultdict(lambda: defaultdict(int))
