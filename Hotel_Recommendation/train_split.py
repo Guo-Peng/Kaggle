@@ -23,6 +23,7 @@ def train_test_split(data):
     data["month"] = data["date_time"].dt.month
     train = data[((data.year == 2013) | ((data.year == 2014) & (data.month < 8)))]
     test = data[((data.year == 2014) & (data.month >= 8))]
+    test = test[test.is_booking == True]
     return train, test
 
 
