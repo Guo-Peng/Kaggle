@@ -18,7 +18,7 @@ N1 = 2  # number of part
 
 def run_solution():
     print('Preparing arrays...')
-    f = open("../input/train.csv", "r")
+    f = open("../../kaggle_data/hotel_recommendation/data/train.csv", "r")
     f.readline()
     best_hotels_od_ulc = defaultdict(lambda: defaultdict(int))
     best_hotels_search_dest = defaultdict(lambda: defaultdict(int))
@@ -77,12 +77,12 @@ def run_solution():
     ###########################
     if validate == 1:
         print('Validation...')
-        f = open("../input/train.csv", "r")
+        f = open("../../kaggle_data/hotel_recommendation/data/train.csv", "r")
     else:
         print('Generate submission...')
-        f = open("../input/test.csv", "r")
+        f = open("../../kaggle_data/hotel_recommendation/data/test.csv", "r")
     now = datetime.datetime.now()
-    path = 'submission_' + str(now.strftime("%Y-%m-%d-%H-%M")) + '.csv'
+    path = '../../kaggle_data/hotel_recommendation/result/submission_' + str(now.strftime("%Y-%m-%d-%H-%M")) + '.csv'
     out = open(path, "w")
     f.readline()
     total = 0
